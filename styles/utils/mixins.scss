@@ -1,0 +1,34 @@
+%cover {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  // object-fit: cover;
+}
+
+%center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%wrapper{
+  width: 100%;
+  max-width: 170rem;
+  margin: auto;
+}
+
+@mixin ratio($height, $width) {
+  font-size: 0;
+  overflow: hidden;
+  position: relative;
+
+  &:after {
+    width: 100%;
+    content: "";
+    display: inline-block;
+
+    padding-top: $width / $height * 100%;
+  }
+}
