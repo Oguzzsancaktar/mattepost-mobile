@@ -1,8 +1,53 @@
+.footer {
+  height: 10rem;
+  background: rgba(0, 0, 0, 0.322);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
 
-.footer{
-position: fixed;    
-bottom: 0;
-left: 50%;
-transform: translateX(-50%) translateY(-100%);
+  @include media('<phone'){
+    height: 15rem;
+  }
 
+  &__control {
+    padding: 0 5rem;
+
+    z-index: 3;
+    position: absolute;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    button {
+      color: white;
+
+      figure{
+        img{
+          height: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+
+  &__nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    &__item {
+    height: 5rem;
+
+      width: 100vw;
+      text-align: center;
+      color: white;
+
+      h1{
+        font-size: 6rem;
+      }
+    }
+  }
 }

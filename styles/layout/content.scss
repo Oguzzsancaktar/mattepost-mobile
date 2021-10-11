@@ -1,0 +1,34 @@
+.content{
+  @extend %center;
+  height:calc(100% - 40rem - 5rem);
+
+  z-index: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 600vw;
+  overflow: hidden;
+  .page{
+    position: relative;
+    transform: translatey( -50%);
+    top: 50%;
+    width: 100vw;
+display: flex;
+justify-content: center;
+align-items: center;
+    padding: 10rem 5rem ;
+    height: 100%;
+
+    text-align: justify;
+    
+  
+    p{
+      display: inline;
+      width: 100%;
+      font-weight: 400;
+    color: honeydew;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    }
+  }
+}

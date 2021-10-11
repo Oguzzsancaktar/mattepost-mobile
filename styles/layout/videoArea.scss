@@ -1,0 +1,28 @@
+.video-area{
+  @extend %center;
+  top: -100vh;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  background: rgba(black, 0.6);
+  transition: 1s;
+
+  &__wrapper{
+    @extend %wrapper;
+    @extend %center;
+    height:calc(100% - 20rem - 5rem);
+
+
+    @include media('<phone'){
+    height:calc(100% - 30rem - 10rem);
+     
+    }
+  }
+}
+
+.video-area.active{
+
+  top: 0vh;
+
+}
